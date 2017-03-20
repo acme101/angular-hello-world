@@ -42,9 +42,3 @@ Thumbs.db
 # for teracy-dev file mapping
 !dist/.gitkeep
 !node_modules/.gitkeep
-
-# angular-boilerplate
-.angular-cli.json
-package.json
-docker-compose.yml
-docker-compose.prod.yml
