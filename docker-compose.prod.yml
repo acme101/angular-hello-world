@@ -15,11 +15,10 @@ services:
         - CI_PROJECT_NAME=${CI_PROJECT_NAME}
     image: ${DOCKER_IMAGE_PROD:-acme101/angular-hello-world:develop}
     environment:
-      VIRTUAL_HOST: nghw.acme.dev
+      VIRTUAL_HOST: ahw.acme.dev
       HTTPS_METHOD: noredirect # support both http and https
     ports:
       - "80"
-    restart: unless-stopped
     # to get this work with https://github.com/jwilder/nginx-proxy
     # related: https://github.com/jwilder/nginx-proxy/issues/305
     network_mode: bridge

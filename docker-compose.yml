@@ -19,7 +19,7 @@ services:
     command: bash -c "yarn run start"
     environment:
       NODE_ENV: development
-      VIRTUAL_HOST: dev.nghw.acme.dev
+      VIRTUAL_HOST: dev.ahw.acme.dev
       HTTPS_METHOD: noredirect # support both http and https
     volumes:
       - .:/opt/app

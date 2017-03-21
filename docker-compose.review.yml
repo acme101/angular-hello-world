@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  review:
+    container_name: angular-hello-world_review
+    image: ${DOCKER_IMAGE_REVIEW:-acme101/angular-hello-world:develop}
+    environment:
+      VIRTUAL_HOST: review.ahw.acme.dev
+      HTTPS_METHOD: noredirect # support both http and https
+    ports:
+      - "80"
+    # to get this work with https://github.com/jwilder/nginx-proxy
+    # related: https://github.com/jwilder/nginx-proxy/issues/305
+    network_mode: bridge
