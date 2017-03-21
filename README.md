@@ -1,7 +1,7 @@
-# angular-hello-world [![Build Status](https://travis-ci.org/teracyhq/angular-hello-world.svg?branch=develop)](https://travis-ci.org/teracyhq/angular-hello-world)
+# angular-hello-world [![Build Status](https://travis-ci.org/acme101/angular-hello-world.svg?branch=develop)](https://travis-ci.org/acme101/angular-hello-world)
 
 
-This project was created from [angular-boilerplate](https://github.com/teracyhq/angular-boilerplate)
+This project was created from [angular-boilerplate](https://github.com/acme101/angular-boilerplate)
 version 0.2.0.
 
 
