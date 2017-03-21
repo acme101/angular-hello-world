@@ -10,6 +10,24 @@ version 0.2.0.
 Follow: https://github.com/acme101/dev-setup/blob/master/README.md
 
 
+## Generate `node_modules`
+
+Usually, we need `node_modules` to check out the used source code of dependencies.
+
+Use this:
+
+```
+$ cd ~/acme-dev
+$ vagrant ssh
+$ ahw # alias to cd fastly to the workspace/angular-hello-world project
+$ docker run --rm -v $(pwd):/opt/app -w /opt/app node:6-alpine yarn
+```
+
+After that, the `node_modules` directory from the host should be updated.
+
+Note that this `node_modules` package is safe to checkout, delete, modify because is not used by
+the running dev Docker container.
+
 ## Code scaffolding
 
 Open a new terminal window and `ssh` into the `acme-dev` VM:
