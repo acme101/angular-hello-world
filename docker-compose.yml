@@ -4,19 +4,9 @@ services:
 
   dev:
     container_name: angular-hello-world_dev
-    build:
-      context: .
-      dockerfile: Dockerfile-dev
-      args:
-        - CI_BUILD_ID=${CI_BUILD_ID}
-        - CI_BUILD_REF=${CI_BUILD_REF}
-        - CI_BUILD_REF_NAME=${CI_BUILD_REF_NAME}
-        - CI_BUILD_TIME=${CI_BUILD_TIME}
-        - CI_REGISTRY_IMAGE=${CI_REGISTRY_IMAGE}
-        - CI_PROJECT_NAME=${CI_PROJECT_NAME}
-    # we use image for faster developing with `npm install` already run
-    image: ${DOCKER_IMAGE_DEV:-acme101/angular-hello-world:dev_develop}
-    command: bash -c "yarn run start"
+    image: ${DOCKER_IMAGE_DEV:-teracy/angular-cli:1.0.0-rc.2}
+    working_dir: /opt/app
+    command: sh run-dev.sh
     environment:
       NODE_ENV: development
       VIRTUAL_HOST: dev.ahw.acme.dev
@@ -26,6 +16,6 @@ services:
     ports:
       - "4200"
     restart: unless-stopped
-    # to get this work with https://github.com/jwilder/nginx-proxy
+    # to get this work with https://github.com/jwildder/nginx-proxy
     # related: https://github.com/jwilder/nginx-proxy/issues/305
     network_mode: bridge

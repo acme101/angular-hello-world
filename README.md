@@ -1,11 +1,11 @@
-# angular-hello-world [![Build Status](https://travis-ci.org/acme101/angular-hello-world.svg?branch=develop)](https://travis-ci.org/acme101/angular-hello-world)
+# angular-hello-world [![Build Status](https://travis-ci.org/acme101/angular-hello-world.svg?branch=develop)](https://travis-ci.org/acme101/angular-hello-world) [![build status](https://gitlab.com/acme101/angular-hello-world/badges/develop/build.svg)](https://gitlab.com/acme101/angular-hello-world/commits/develop)
 
 
 This project was created from [angular-boilerplate](https://github.com/acme101/angular-boilerplate)
 version 0.2.0.
 
 
-# Getting started
+## Getting started
 
 Follow: https://github.com/acme101/dev-setup/blob/master/README.md
 

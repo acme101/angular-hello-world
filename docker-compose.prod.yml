@@ -12,6 +12,7 @@ services:
         - CI_BUILD_REF_NAME=${CI_BUILD_REF_NAME}
         - CI_BUILD_TIME=${CI_BUILD_TIME}
         - CI_REGISTRY_IMAGE=${CI_REGISTRY_IMAGE}
+        - CI_BUILDER=${CI_BUILDER}
         - CI_PROJECT_NAME=${CI_PROJECT_NAME}
     image: ${DOCKER_IMAGE_PROD:-acme101/angular-hello-world:develop}
     environment:
