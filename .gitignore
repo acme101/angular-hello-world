@@ -40,5 +40,4 @@ testem.log
 Thumbs.db
 .env
 # for teracy-dev file mapping
-!dist/.gitkeep
-!node_modules/.gitkeep
+!.gitkeep
