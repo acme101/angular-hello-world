@@ -7,7 +7,7 @@ version 0.2.0.
 
 ## Getting started
 
-Follow: https://github.com/acme101/dev-setup/blob/master/README.md
+Follow: https://github.com/acme101/dev-setup/blob/v0.1.0/README.md that was tested on teracy-dev v0.5.0-b3
 
 
 ## Generate `node_modules`
