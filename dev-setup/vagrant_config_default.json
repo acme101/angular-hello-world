@@ -1,0 +1,60 @@
+{
+  "vm": {
+    "synced_folders":[{
+      "_id": "1",
+      "_ua_rsync__exclude": [".idea/", "node_modules/", "dist/"]
+    }, {
+      "_id": "angular-hw-101",
+      "type": "virtual_box",
+      "host": "workspace/angular-hello-world/node_modules",
+      "guest": "/home/vagrant/workspace/angular-hello-world/node_modules",
+      "mount_options": [
+        "dmode=775",
+        "fmode=755"
+      ]
+    }, {
+      // enable this to sync /dist back and forth to the host automatically
+      "_id": "angular-hw-102",
+      "type": "virtual_box",
+      "host": "workspace/angular-hello-world/dist",
+      "guest": "/home/vagrant/workspace/angular-hello-world/dist",
+      "mount_options": [
+        "dmode=775",
+        "fmode=755"
+      ]
+    }]
+  },
+
+  "provisioners": [{
+    "_id": "0",
+    "_ua_cookbooks_path": [
+      "workspace/angular-hello-world/dev-setup/chef/main-cookbooks"
+    ],
+    "_ua_run_list": [
+      "angular-hello-world"
+    ],
+    "json": {
+      "teracy-dev": {
+        "aliases": [ {
+          "_id": "angular-hw-100",
+          "name": "ahw",  // `$ ahw` to cd right into the angular-hello-world project
+          "command": "cd ~/workspace/angular-hello-world",
+          "action": "add"
+        }]
+      },
+      "acme": {
+        "angular-hello-world": {
+          "project_guest_path": "/home/vagrant/workspace/angular-hello-world"
+        }
+      }
+    }
+  }],
+  "plugins": [{
+    "_id": "2",
+    "options": {
+      "_ua_aliases": [
+        "dev.angular-hw.acme.dev", "review.angular-hw.acme.dev", "angular-hw.acme.dev"
+      ]
+    }
+  }]
+}
